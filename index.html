@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Wasda!</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #fadadd; /* Warna pink pastel */
+            font-family: monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        #start-screen {
+            text-align: center;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ff6b9e;
+            color: white;
+            border: 3px solid #333;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 4px 4px 0px #333;
+            transition: 0.1s;
+        }
+        button:active {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px #333;
+        }
+        #party-frame {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ganti 'lagu.mp3' dengan nama file lagumu yang sebenarnya -->
+    <audio id="bg-music" loop>
+        <source src="lagu.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Layar Awal -->
+    <div id="start-screen">
+        <h2 style="color: #333;">Ada kado buat Wasda 🎁</h2>
+        <button onclick="startParty()">Buka Kadonya</button>
+    </div>
+
+    <!-- Iframe alittlepartyroom -->
+    <!-- Ganti URL di bawah dengan link hasil generate dari alittlepartyroom milikmu -->
+    <iframe id="party-frame" src="MASUKKAN_LINK_ALITTLEPARTYROOM_DI_SINI"></iframe>
+
+    <script>
+        function startParty() {
+            // Memutar lagu
+            document.getElementById('bg-music').play();
+            
+            // Menyembunyikan layar awal
+            document.getElementById('start-screen').style.display = 'none';
+            
+            // Menampilkan iframe alittlepartyroom
+            document.getElementById('party-frame').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
